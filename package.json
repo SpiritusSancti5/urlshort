@@ -1,0 +1,26 @@
+{
+  "name": "urlshort",
+  "version": "1.0.0",
+  "description": "url api",
+  "main": "index.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpiritusSancti5/urlshort.git"
+  },
+  "keywords": [
+    "url",
+    "short"
+  ],
+  "author": "SpiritusSancti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SpiritusSancti5/urlshort/issues"
+  },
+  "homepage": "https://github.com/SpiritusSancti5/urlshort#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
