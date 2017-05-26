@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 var body_parser = require('body-parser');
-var cors = require('cors');
 var validUrl = require("valid-url");
 
 var mongoose = require('mongoose');
@@ -14,7 +13,6 @@ var port = process.env.PORT || 8080;
 
 app.use('/', express.static(__dirname + '/page'));
 app.use(body_parser.json());
-app.use(cors());
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/url')
 
