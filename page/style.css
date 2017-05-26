@@ -1,0 +1,19 @@
+body {
+  height: 888px;
+  background-color: #00ccff;
+    background: -webkit-linear-gradient(rgb(0, 122, 153) 0.2%, #00ccff 50%, yellow 95%, #ff6600);
+    background: -o-linear-gradient(rgb(0, 122, 153) 0.2%, #00ccff 50%, yellow 95%, #ff6600);
+    background: -moz-linear-gradient(rgb(0, 122, 153) 0.2%, #00ccff 50%, yellow 95%, #ff6600);
+    background: linear-gradient(rgb(0, 122, 153) 0.2%, #00ccff 50%, rgb(179, 240, 255) 65%, yellow 95%, #ff6600);
+}
+
+div {
+  margin: 2px;
+}
+
+#CC {
+  margin-top: 8%;
+  text-align: center;
+  font-size: 15px;
+  color: #555;
+}
