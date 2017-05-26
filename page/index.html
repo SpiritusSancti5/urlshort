@@ -13,18 +13,18 @@
     <h1 class="header">API Basejump: Timestamp Microservice</h1> |
         <a href="https://github.com/SpiritusSancti5/timestamp">Project GitHub</a></p>
     <blockquote>User Stories:
-        <ul>I can pass a string as a parameter, and it will check to see whether that string contains either a unix
-                timestamp or a natural language date (example: January 1, 2016)</ul>
-        <ul>If it does, it returns both the Unix timestamp and the natural language form of that date.</ul>
-        <ul>If it does not contain a date or Unix timestamp, it returns <code>null</code> for those properties.</ul>
+        <ul>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</ul>
+        <ul> If I pass an invalid URL that doesn't follow the valid http://www.example.com format, 
+        the JSON response will contain an error instead.</ul>
+        <ul>When I visit that shortened URL, it will redirect me to my original link.</ul>
     </blockquote>
     <h3>Example usage:</h3>
     <code>https://short-roast-url.herokuapp.com/new/http://example.com</code><br>
     <code>https://short-roast-url.herokuapp.com/new/example.com</code><br>
     <code>https://short-roast-url.herokuapp.com/1</code>
     <h3>Example output:</h3>
-    <code>{"original":"http://example.com","short":"36599","_id":"5927ef5ad134ba0f633342b7"}</code>
-    <code>{"original":"Incomplete or Invalid Url","short":"N/A","_id":"5927efe6d134ba0f633342b9"}</code>
+    <code>{"original":"http://example.com","short":"36599","_id":"5927ef5ad134ba0f633342b7"}</code><br>
+    <code>{"original":"Incomplete or Invalid Url","short":"N/A","_id":"5927efe6d134ba0f633342b9"}</code><br>
     <code>Invalid Short URL</code>
 </div>
 <div id="CC">< by SpiritusSancti5 ></div>
