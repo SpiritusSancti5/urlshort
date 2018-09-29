@@ -22,6 +22,7 @@ app.use(cors());
 
 /** this project needs to parse POST bodies **/
 // you should mount the body-parser here
+app.use(body_parser.urlencoded({ extended: true })); 
 app.use(body_parser.json());
 
 app.use('/public', express.static(process.cwd() + '/public'));
@@ -36,15 +37,13 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
-
-app.get('/new/:newUrl(*)', function(req,res) {
-    var newUrl = req.params.newUrl;
-    
-    if(validUrl.isUri(newUrl)){
+app.post("/new", function(req, res) {
+  
+  if(validUrl.isUri(req.body.url)){
       var short = Math.floor(Math.random()*55555).toString();
       var data = new urlList(
         {
-           original: newUrl,
+           original: req.body.url,
            short: short
         }
       );
@@ -57,20 +56,19 @@ app.get('/new/:newUrl(*)', function(req,res) {
       
       return res.json(data);
     } 
-    
-      var data = new urlList({
+  
+  var data = new urlList({
         original: 'Incomplete or Invalid Url',
         short: 'N/A'
       });
     
-    return res.json(data); 
-      
-  
+  return res.json(data); 
 });
 
+
 app.get('/new/*', function(req,res) {
-    var newUrl = req.params.url;
-    
+    var newUrl = req.params[0];
+  
     if(validUrl.isUri(newUrl)){
       var short = Math.floor(Math.random()*55555).toString();
       var data = new urlList(
